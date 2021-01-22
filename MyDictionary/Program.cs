@@ -9,10 +9,20 @@ namespace MyDictionary
         {
             Dictionary<int, int> _dictionary = new Dictionary<int, int>();
 
-            MyDictionary<int, string> _myDictionary = new MyDictionary<int, string>();
-            _myDictionary.Add(1, "orhan");
-            _myDictionary.Add(2, "fatih");
-            _myDictionary.Add(3, "emre");
+            MyDictionary<int, string> arkadas = new MyDictionary<int, string>();
+            arkadas.Add(1, "orhan");
+            arkadas.Add(2, "fatih");
+            arkadas.Add(3, "emre");
+
+            foreach (var key in arkadas.Keys)
+            {
+                Console.WriteLine(key);
+            }
+
+            foreach (var value in arkadas.Values)
+            {
+                Console.WriteLine(value);
+            }
         }
     }
 }

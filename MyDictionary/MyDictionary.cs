@@ -14,8 +14,8 @@ namespace MyDictionary
 
         public MyDictionary()
         {
-            TKey[] keys = new TKey[0];
-            TValue[] values = new TValue[0];
+            keys = new TKey[0];
+            values = new TValue[0];
         }
 
         public void Add(TKey key,TValue value)
@@ -25,7 +25,7 @@ namespace MyDictionary
             keys = new TKey[keys.Length + 1];
             values = new TValue[values.Length + 1];
 
-            for (int i = 0; i < keys.Length; i++)
+            for (int i = 0; i < tempKeys.Length; i++)
             {
                 keys[i] = tempKeys[i];
                 values[i] = tempValues[i];
@@ -33,6 +33,20 @@ namespace MyDictionary
 
             keys[keys.Length - 1] = key;
             values[values.Length - 1] = value;
+        }
+
+        public int Length
+        {
+            get { return keys.Length; }
+        }
+
+        public TKey[] Keys
+        {
+            get { return keys; }
+        }
+        public TValue[] Values
+        {
+            get { return values; }
         }
     }
 }
